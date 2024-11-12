@@ -119,7 +119,7 @@ USE_TZ = True  # Habilita suporte a fuso horário.
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/core/'
 # Configurações de autenticação e redirecionamento.
 LOGIN_REDIRECT_URL = 'home'  # URL para redirecionar após login.
 LOGIN_URL = '/accounts/login'  # URL para página de login.
