@@ -1,0 +1,263 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FDECDA !important; 
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* cabeçalho*/
+header {
+  background-color:#FFFFFF;
+  padding: 14px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.brand-name {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 3vw; /* Usando vw para ser responsivo */
+  color: #543320;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 2vw; /* Usando vw para margem responsiva */
+}
+
+/* Menu de navegação */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  margin-right: 3vw; /* Usando vw para margem responsiva */
+  justify-content: flex-start; 
+}
+
+.ul li {
+  margin-left: 2vw; /* Usando vw para espaçamento responsivo */
+  margin-top: 1.5vw;
+}
+
+.ul a {
+  text-decoration: none;
+  color: #7C4F39;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+
+nav ul a::after {
+  content: "";
+  background-color: #BD966D;
+  height: 3px;
+  width: 0%;
+  display: block;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+nav ul a:hover::after {
+  width: 100%;
+}
+
+.retangulao{
+  background-color: #bba792; 
+  width: 1280px;
+  height: 420px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  top: -20px;
+}
+
+.rosto img{
+position: relative;
+width: 48%;
+height: 45%;
+top: -426px;
+z-index: 10;
+left: -30px;
+}
+
+.texto-retangulo{
+  position: absolute; /* Permite que o texto seja posicionado em relação ao contêiner pai */
+  top: 62%; /* Alinha o texto verticalmente no meio do contêiner */
+  left: 700px; /* Alinha o texto horizontalmente no meio do contêiner */
+  z-index: 2; /* Define a ordem de empilhamento do texto (maior valor) */
+  font-size: 18px; /* Tamanho da fonte (ajuste conforme necessário) */
+  color: #7C4F39;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tratamentos h2{
+  font-family: 'Segoe UI', sans-serif;
+  color: #542020;
+  font-size: 1.7rem;
+  position: relative;
+  text-align: center;
+  top: -330px;
+}
+
+.linha1-marrom{
+  height: 4px;
+  background-color: #BD966D; 
+  width: 7%;
+  position: relative;
+  left: 580px;
+  top: -320px;
+}
+
+
+.laser img{
+  position: relative;
+  max-width: 20%;
+  top: -580px;
+  left: 500px;
+}
+
+.radiofrequencia img{
+  position: relative;
+  max-width: 20.5%;
+  top: -920px;
+  left: 880px;
+}
+
+.ultrassom img{
+  position: relative;
+  max-width: 20%;
+  top: 150px;
+  left: 140px;
+}
+
+.capilar h2{
+  font-family: 'Segoe UI', sans-serif;
+  color: #542020;
+  font-size: 1.7rem;
+  position: relative;
+  text-align: center;
+  top: -430px;
+}
+
+.linha2-marrom{
+  height: 4px;
+  background-color: #BD966D; 
+  width: 7%;
+  position: relative;
+  left: 580px;
+  top: -420px;
+}
+
+.detox img{
+  position: relative;
+  max-width: 20%;
+  top: -300px;
+  left: 140px;
+}
+
+.terapia img{
+  position: relative;
+  max-width: 20%;
+  top: -638px;
+  left: 500px;
+}
+
+.microagulhamento img{
+  position: relative;
+  max-width: 20.5%;
+  top: -980px;
+  left: 880px;
+}
+
+
+@media (max-width: 768px) {
+
+  .header {
+      padding: 20px 10px;
+      flex-direction: column;
+      align-items: center; 
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .ul {
+      display: none; 
+      flex-direction: column; 
+      align-items: center; 
+      width: 100%;
+      background-color: #ffffff;
+      position: absolute;
+      top: 60px; 
+      left: 0;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .ul.active {
+      display: flex; 
+  }
+
+  .ul li {
+      margin-left: 0; 
+      margin-top: 10px; 
+  }
+
+  .retangulao {
+      color: #ff8502; 
+      width: 490px; /* Largura do retângulo */
+      height: 200px; /* Altura do retângulo */
+      box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
+      position: relative; /* Permite posicionar o retângulo em relação ao seu contêiner pai */
+      z-index: 1; /* Define a ordem de empilhamento (ajuste conforme necessário) */
+      margin-top: 20px; /* Espaçamento superior */
+  }
+
+  .rosto img{
+    position: relative;
+    width: 30px;
+    height: 40px;
+    z-index: 10;
+    left: 30px;
+  }
+  
+
+  .texto-retangulo p{
+      position: relative;
+      right: -400px;
+      text-align: center;
+  }
+
+  .tratamentos h2{
+      font-family: 'Segoe UI', sans-serif;
+      color: #542020;
+      font-size: 1.2rem;
+      top: 20px;
+  }
+
+  .capilar h2{
+    font-family: 'Segoe UI', sans-serif;
+    color: #542020;
+    font-size: 1.2rem;
+    bottom: -50%;
+    position: relative;
+  }
+
+ 
+}

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermaClinics</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/icon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="content">
+            <a href="{% url 'home' %}" class="brand-name">Dermaclinics</a>
+            <nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    &#9776; <!-- Ícone de menu -->
+                </div>
+                <ul class="ul" id="menu">
+                    <li><a href="{% url 'login' %}">LOGIN/CADASTRO</a></li>
+                    <li><a href="{% url 'tratamentos' %}">TRATAMENTOS</a></li>
+                    <li><a href="{% url 'tecnologias' %}">TECNOLOGIAS</a></li>
+                    <li><a href="{% url 'consultorio' %}">CONSULTÓRIO</a></li>
+                    <li><a href="{% url 'sobrenos' %}">SOBRE NÓS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Retângulo Azul -->
+    <div class="retangulo-um">
+        </div>
+
+    
+
+        <!-- Seção Derma -->
+        <div class="derma">
+            <p class="derma-p">Dermaclinics</p>
+        </div>
+        <div class="sempre">
+<p class="text-lowercase">Sempre pensando no seu bem-estar e na<br>saúde da sua pele.</p>
+</div>
+        <div class="botao">
+            <a href="{% url 'login' %}">
+                <button class="botao-consulta" type="button">Agende sua consulta</button>
+            </a>
+            
+
+        
+    </div>
+    
+    <section class="conheca-section">
+        <div class="conhecafer">
+            <h1>Conheça a Dra. Fernanda Silva</h1>
+            <h5>CRM 144.418 | RQE 45449</h5>
+        </div>
+        
+        <div class="imagem-fernanda">
+            <img src="{% static 'img/fernanda.jpeg' %}" alt="Dra. Fernanda Silva">
+        </div>
+    </section>
+
+    <ul class="list-conhecafer">
+        <li>• Doutorado em Dermatologia pela Universidade Federal do Rio Grande do Sul <br> (UFRGS)</li>
+        <li>• Certificação em Dermatologia Estética pela Associação Internacional de <br> Dermatologia Estética (AIDE)</li>
+        <li>• Formação Avançada em Cirurgia Dermatológica no Hospital das Clínicas de <br>Porto Alegre</li>
+        <li>• Residência Médica em Dermatologia no Hospital das Clínicas da Universidade <br> de São Paulo (USP)</li>
+        <li>• Professora Associada de Dermatologia Clínica na Universidade Federal de Santa <br> Catarina (UFSC)</li>
+        <li>• Especialização em Fototerapia</li>
+    </ul>
+    
+    <section class="especialidades-section">
+        <div class="especialidade">
+            <h2>ESPECIALIDADES</h2>
+        </div>
+           
+        
+        
+        <!-- Clínica -->
+        <div class="clinica">
+            <div class="especialidade-content">
+                <img src="{% static 'img/clinico.PNG' %}" alt="Dermatologia Clínica">
+                <h3>Dermatologia Clínica</h3>
+                <p>Na dermatologia, os tratamentos mais comuns incluem acne, rosácea, psoríase, eczemas, melasma, micoses, urticária, vitiligo e dermatite seborreica.</p>
+            </div>
+        </div>
+        
+        <!-- Estética -->
+        <div class="Estética">
+            <div class="especialidade-content">
+                <img src="{% static 'img/segunda.PNG' %}" alt="Dermatologia Estética">
+                <h3>Dermatologia Estética</h3>
+                <p>Uma pele saudável é o nosso objetivo. Oferecemos tratamentos de peeling, preenchimentos, aplicação de toxina botulínica e outros procedimentos para manter a saúde e a aparência jovem da pele.</p>
+            </div>
+        </div>
+        
+        <!-- Tricologia -->
+        <div class="Tricologia">
+            <div class="especialidade-content">
+                <img src="{% static 'img/terceira.PNG' %}" alt="Tricologia">
+                <h3>Tricologia</h3>
+                <p>Diagnóstico e tratamento para alterações e problemas relacionados aos cabelos e couro cabeludo, como queda de cabelo e afinamento dos fios.</p>
+            </div>
+        </div>
+
+        <!-- Melasma -->
+        <div class="Melasma">
+            <div class="especialidade-content">
+                <img src="{% static 'img/quarto.PNG' %}" alt="Melasma">
+                <h3>Melasma</h3>
+                <p>Tratamos melasma com cremes clareadores, peelings químicos e lasers para reduzir manchas escuras e uniformizar o tom da pele.</p>
+            </div>
+        </div>
+        
+        <!-- Pediátrica -->
+        <div class="Pediátrica">
+            <div class="especialidade-content">
+                <img src="{% static 'img/quinta.PNG' %}" alt="Dermatologia Pediátrica">
+                <h3>Pediátrica</h3>
+                <p>Conheça nossos tratamentos para verrugas virais, molusco contagioso, dermatite de fraldas, hemangioma e dermatite atópica, melhorando o conforto e bem-estar de crianças e bebês.</p>
+            </div>
+        </div>
+
+        <!-- Cicatrizes -->
+        <div class="Cicatrizes">
+            <div class="especialidade-content">
+                <img src="{% static 'img/ultima.PNG' %}" alt="Queloides e Cicatrizes">
+                <h3>Queloides e Cicatrizes</h3>
+                <p>Na dermatologia, os tratamentos mais comuns abrangem acne, rosácea, psoríase, eczemas, melasma, micoses, urticária, vitiligo e dermatite seborreica.</p>
+            </div>
+        </div>
+
+
+
+        <div class="retangulo_tres">
+            <div class="equipamento">
+                <h2>EQUIPAMENTOS</h2>
+                <div class="linha"></div>
+
+                <div class="wrapper">
+                    <i id="left" class="fa-solid fa-angle-left"></i>
+                    <div class="carrossel">
+                        <img src="{% static 'img/1.jpg' %}" alt="Laser de CO2 Fracionado">
+                        <img src="{% static 'img/2.jpg' %}" alt="Laser ND-YAG">
+                        <img src="{% static 'img/3.jpg' %}" alt="Laser de Alexandrite">
+                        <img src="{% static 'img/4.jpg' %}" alt="Luz Intensa Pulsada">
+                        <img src="{% static 'img/5.jpg' %}" alt="Dermatoscópio Digital">
+                        <img src="{% static 'img/6.jpg' %}" alt="Radiofrequência">
+                        <img src="{% static 'img/7.jpg' %}" alt="Microagulhamento com Drug Delivery">
+                        <img src="{% static 'img/8.jpg' %}" alt="Ultrassom Microfocado (HIFU)">
+                        <img src="{% static 'img/9.jpg' %}" alt="Luz Intensa Pulsada (IPL)">
+                    </div>
+                    <i id="right" class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+
+
+<div class="retangulo-quatro">
+    <div class="comentário">
+        <h2>FEEDBACK</h2> </div>
+        <div class="linha2"></div>
+
+        <div class="wrapper2">
+            <div class="box">
+                <i class="fas fa-quote-left quote"></i>
+                <p>Minha experiência com a Dermaclinics foi excepcional! A equipe foi extremamente profissional e acolhedora. Eu procurei o tratamento para manchas de pigmentação, e o resultado foi além das minhas expectativas.</p>
+
+                <div class="content">
+                    <div class="info">
+                        <div class="name">Ana Paula Santos</div>
+                        <div class="job">Designer Gráfico</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="css/img/MULHER3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-quote-left quote"></i>
+                <p>Excelente atendimento na Dermaclinics! Desde a primeira consulta, fui recebido com cordialidade e atenção. O tratamento para rosácea que segui foi muito bem planejado e os resultados foram notáveis</p>
+                <div class="content">
+                    <div class="info">
+                        <div class="name">Marcos Oliveira</div>
+                        <div class="job">Engenheiro Civil</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="css/img/homem.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-quote-left quote"></i>
+                <p>A Dermaclinics superou minhas expectativas em todos os aspectos. O tratamento para acne que recebi foi muito eficaz e a melhoria na minha pele foi rápida e visível. O atendimento foi excepcional.</p>
+                <div class="content">
+                    <div class="info">
+                        <div class="name">Juliana Costa</div>
+                        <div class="job">Advogada</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="css/img/MULHER7.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer_content">
+                <!-- Seção de Contato e Redes Sociais -->
+                <div id="footer_contacts">
+                    <h1>Clínica de Dermatologia</h1>
+                    <p>Cuidando da sua pele com carinho e expertise.</p>
+        
+                    <div id="footer_social_media">
+                        <!-- Links para redes sociais da clínica -->
+                        <a href="https://www.instagram.com/dermacliniics/?igsh=Zm9hcWFtd2RubTk2" class="footer-link" id="instagram" title="Siga-nos no Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+        
+                        <a href="https://www.facebook.com/senaisaopaulo/?locale=pt_BR" class="footer-link" id="facebook" title="Curta nossa página no Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+        
+                        <a href="https://web.whatsapp.com/" class="footer-link" id="whatsapp" title="Envie uma mensagem pelo WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links úteis sobre a clínica -->
+                <ul class="footer-list">
+                    <li>
+                        <h3>Sobre Nós</h3>
+                    </li>
+                    <li>
+                        <a href="sobrenos.html" class="footer-link">Quem Somos</a>
+                    </li>
+                    <li>
+                        <a>Nossos Serviços</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Equipe</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Contato</a>
+                    </li>
+                </ul>
+        
+                <!-- Blog com dicas e informações -->
+                <ul class="footer-list">
+                    <li>
+                        <h3>Blog</h3>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Cuidados com a Pele</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Tratamentos e Procedimentos</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Dicas de Beleza</a>
+                    </li>
+                </ul>
+        
+                <!-- Assine nossa newsletter -->
+                <div id="footer_subscribe">
+                    <h3>Assine Nossa Newsletter</h3>
+        
+                    <p>
+                        Receba as últimas novidades e dicas sobre cuidados com a pele diretamente no seu e-mail.
+                    </p>
+        
+                    <div id="input_group">
+                        <input type="email" id="email" placeholder="Seu e-mail">
+                        <button>
+                            <i class="fa-regular fa-envelope"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Direitos autorais -->
+            <div id="footer_copyright">
+                &#169; 2024 Todos os direitos reservados
+            </div>
+        </footer>
+
+    <script src="{% static 'js/inicial.js' %}"></script>
+</body>
+</html>

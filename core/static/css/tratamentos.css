@@ -1,0 +1,712 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #D2C1AF; 
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-neutral-0: #512600;
+  --color-neutral-10: #907761;
+  --color-neutral-30: #ffffff;
+  --color-neutral-40: #f5f5f5;
+  --color-footer-black: #000000;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 14px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;    
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.brand-name {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 3vw;
+  color: #543320;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 2vw;
+}
+
+.menu-toggle {
+  display: none; 
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.ul {
+  list-style-type: none; 
+  padding: 0;
+  display: flex;
+  margin: 0;
+  margin-right: 3vw;
+  justify-content: flex-start; 
+}
+
+.ul li {
+  margin-left: 2vw;
+  margin-top: 1.5vw;
+}
+
+.ul a {
+  text-decoration: none; 
+  color: #7C4F39;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  padding: 10px;
+  transition: 0.3s; 
+}
+
+/* Efeito de hover no menu */
+nav ul a::after {
+  content: "";
+  background-color: #BD966D;
+  height: 3px;
+  width: 0%; 
+  display: block;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+nav ul a:hover::after {
+  width: 100%;
+}
+
+/* Estilização da seção topo do site */
+section.topo-site {
+  padding: 40px 4%; 
+}
+
+.flex {
+  display: flex; 
+  align-items: center; 
+}
+
+.txt-topo-site {
+  flex: 1;
+}
+
+.img-topo-site {
+  flex: 0 0 40%;
+  max-width: 300px;
+  animation: float 3s ease-in-out infinite; 
+}
+
+/* Animação para a imagem flutuar */
+@keyframes float { 
+  0%, 100% {
+      transform: translateY(0); 
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+.topo-site h1 {
+  color: #543320;
+  font-size: 35px;
+  line-height: 60px; 
+}
+
+.topo-site .txt-topo-site p {
+  color: #543320;
+  font-size: 19px;
+  margin: 40px 0; 
+}
+
+.btn-contato {
+  margin-top: 20px; 
+}
+
+.btn-contato button {
+  background-color: #BD966D; 
+  color: #fff; 
+  border: none; 
+  padding: 10px 20px;
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+h2.titulo {
+  color: #543320;
+  font-size: 32px;
+  text-align: center; 
+}
+
+.btn-contato button:hover {
+  background-color: #7C4F39; 
+}
+
+.img-topo-site {
+  flex: 0 0 40%; 
+  max-width: 400px; 
+}
+
+.img-topo-site img {
+  width: 100%; 
+  height: auto;
+  max-height: none; 
+}
+
+/* Estilização da seção de Especialidades */
+section .especialidades {
+  padding: 60px 4%; 
+  background-color: #000; 
+  text-align: center;
+}
+
+section .especialidades .flex {
+  display: flex;
+  justify-content: center; 
+  gap: 40px; 
+  flex-wrap: wrap; 
+}
+
+.especialidades .especialidades-box {
+  color: #7C4F39;
+  padding: 30px; 
+  border: 2px solid #BD966D; 
+  transition: transform 0.3s ease; 
+  text-align: center; 
+  max-width: 250px; 
+  margin: 25px auto;
+}
+
+/* Efeito de hover para os boxes de especialidades */
+.especialidades .especialidades-box:hover {
+  transform: scale(1.05); 
+}
+
+.especialidades .especialidades-box i {
+  font-size: 50px; 
+  color: #BD966D; 
+}
+
+.especialidades .especialidades-box h3 {
+  font-size: 22px;
+  margin: 15px 0; 
+  font-weight: bold; 
+}
+
+.especialidades .especialidades-box p {
+  font-size: 17px; 
+  color: #4f3324; 
+  margin-top: 10px; 
+}
+
+/* Estilo dos ícones (se necessário) */
+.icon-website::before {
+  content: "\f121"; 
+  font-family: "FontAwesome"; 
+}
+
+.icon-shop::before {
+  content: "\f07a"; 
+  font-family: "FontAwesome";
+}
+
+.icon-blog::before {
+  content: "\f19c";
+  font-family: "FontAwesome";
+}
+
+.beneficios .flex {
+  align-items: center; 
+}
+
+.img-sobre {
+  width: 40%; 
+  margin-left: 5%;
+  margin-top: 6%; 
+}
+
+.img-sobre img {
+  width: 140%;
+  height: auto;
+  margin-left: 10%;
+}
+
+.txt-beneficios {
+  margin-right: 5%; 
+  margin-left: 23%; 
+  color: #4f3324; 
+}
+
+/*card*/
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.card {
+  width: 325px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 40px; /* Reduzi o espaçamento vertical */
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 8px;
+  text-align: left;
+  position: relative;
+  top: 3px;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card-content .btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #543320;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.card-content .btn:hover {
+  background-color: #BD966D;
+}
+
+/*rodapé*/
+
+footer {
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+footer {
+  width: 100%;
+  color: var(--color-neutral-40);
+  padding: 1.5rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-neutral-10);
+}
+
+#footer_content {
+  background-color: var(--color-neutral-10);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 3.5rem;
+  width: 100%;
+}
+
+#footer_contacts h1 {
+  margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+  display: flex;
+  justify-content: center; /* Certifique-se de que os ícones estão centralizados */
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; 
+  height: 2.5rem;
+  width: 2.5rem;
+  color: var(--color-neutral-40);
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+  font-size: 1.25rem;    
+}
+
+#footer_social_media .footer-link:hover {
+  opacity: 0.8;
+}
+
+#instagram {
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+  background-color: #4267b3;
+}
+
+#whatsapp {
+  background-color: #25d366;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.70rem;
+  list-style: none;
+  margin-right: 1rem; /* Ajuste o valor conforme necessário */
+}
+
+.footer-list .footer-link {
+  color: var(--color-neutral-30);
+  transition: all 0.4s;
+  text-decoration: none; /* Remove a linha embaixo dos links */
+}
+
+.footer-list .footer-link:hover {
+  color: #540000;
+}
+
+#footer_subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#footer_subscribe p {
+  color: var(--color-neutral-30);
+}
+
+#input_group {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-neutral-0);
+  border-radius: 4px;
+}
+
+#input_group input {
+  all: unset;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+#input_group button {
+  background-color: #7f37c9;
+  border: none;
+  color: var(--color-neutral-40);
+  padding: 0px 1.25rem;
+  font-size: 1.125rem;
+  height: 100%;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+#input_group button:hover {
+  opacity: 0.6;
+}
+
+#footer_copyright {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-footer-black);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 100;
+  width: 100%;
+  margin-bottom: -10%;
+  padding: 1.5rem 0;
+}
+
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 60%; 
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #cccccc; 
+}
+
+/* Ajustes de responsividade */
+@media screen and (max-width: 768px) {
+  #footer_content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #footer_content {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 3rem 2rem;
+  }
+}
+
+@media screen and (max-width: 1004px) {
+  .form-image {
+      display: none;
+  }
+  .container {
+      width: 70%;
+  }
+  .form {
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+      width: 90%;
+      height: auto;
+  }
+  .input-group {
+      flex-direction: column;
+      z-index: 5;
+      padding-right: 5rem;
+      max-height: 10rem;
+      overflow-y: scroll;
+      flex-wrap: nowrap;
+  }
+  .gender-group {
+      margin-top: 2rem;
+  }
+  .gender-input {
+      flex-direction: column;
+  }
+  .gender-input input {
+      margin-right: 0;
+  }
+  .gender-title h6 {
+      margin: 0;
+  }
+  .input-box {
+      width: 100%;
+  }
+  .input-box input {
+      width: 100%;
+  }
+  .continue-button button {
+      width: 100%;
+  }
+}
+
+@media (max-width: 1020px) {
+  /* Estilos gerais para o menu */
+.ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  margin-right: 3vw;
+  justify-content: flex-start;
+}
+
+/* Estilos para os itens do menu */
+.ul li {
+  margin-left: 2vw;
+  margin-top: 1.5vw;
+}
+
+.ul a {
+  text-decoration: none;
+  color: #7C4F39;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+/* Efeito de linha abaixo do link */
+nav ul a::after {
+  content: "";
+  background-color: #BD966D;
+  height: 3px;
+  width: 0%;
+  display: block;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+nav ul a:hover::after {
+  width: 100%;
+}
+
+/* Estilos para o ícone de menu hamburguer */
+.menu-toggle {
+  display: none;  /* Inicialmente escondido */
+  font-size: 30px;
+  cursor: pointer;
+  color: #7C4F39;
+}
+
+/* Estilo para o menu em telas pequenas (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* Mostrar o ícone de menu */
+  .menu-toggle {
+      display: block;
+  }
+
+  /* Esconder o menu */
+  .ul {
+      display: none;  /* Ocultar o menu quando a tela for pequena */
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      background-color: #fff;  /* Cor de fundo para o menu */
+      position: absolute;
+      top: 60px;  /* Ajuste para ficar abaixo do topo */
+      left: 0;
+  }
+
+  /* Estilos para os itens do menu em telas pequenas */
+  .ul li {
+      margin-left: 0;
+      margin-top: 20px;  /* Aumentar o espaçamento entre os itens */
+  }
+
+  /* Exibir o menu quando a classe 'show' for adicionada */
+  .ul.show {
+      display: flex;
+  }
+
+  /* Estilos para os links do menu em telas pequenas */
+  .ul a {
+      font-size: 18px;
+      padding: 15px;
+      display: block;
+      color: #7C4F39;
+  }
+}
+
+  
+  .flex {
+      flex-direction: column;
+  }
+
+  .topo-site .flex {
+      flex-direction: column-reverse;
+  }
+
+  .txt-topo-site h1 {
+      font-size: 27px;
+  }
+
+  .section.topo-site {
+      padding: 20px 8%;
+  }
+
+  .img-topo-site img {
+      width: 100%;
+  }
+
+  .section.topo-site.flex {
+      gap: 40px;
+  }
+
+  h2.titulo {
+      font-size: 25px;
+  }
+  
+  .section .especialidades {
+      padding: 40px 8%;
+  }
+
+  .beneficios .flex {
+      flex-direction: column; /* Altera a direção do flex para coluna */
+      align-items: center; /* Centraliza os itens */
+      text-align: center; /* Centraliza o texto de todos os elementos dentro */
+  }
+
+  .img-sobre {
+      width: 80%; /* Reduz a largura da imagem */
+      margin: 0; /* Remove margens */
+  }
+
+  .img-sobre img {
+      flex-direction: column-reverse;
+      width: 50%; /* Garante que a imagem não exceda a largura do contêiner */
+      height: auto; /* Mantém a proporção */
+  }
+
+  .txt-beneficios {
+      margin: 20px 50px; 
+      margin-left: 20px; /* Ajuste a margem esquerda conforme necessário */
+      text-align: left; /* Alinha o texto à esquerda */
+  }
+
+  .txt-beneficios p {
+      font-size: 16px; 
+      margin: 0; 
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+      padding: 20px 10px;
+      flex-direction: column;
+      align-items: center; 
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .ul {
+      display: none; 
+      flex-direction: column; 
+      align-items: center; 
+      width: 100%;
+      background-color: #ffffff;
+      position: absolute;
+      top: 60px; 
+      left: 0;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .ul.active {
+      display: flex; 
+  }
+
+  .ul li {
+      margin-left: 0; 
+      margin-top: 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+      padding: 20px 10px; 
+      flex-direction: column;
+  }
+}

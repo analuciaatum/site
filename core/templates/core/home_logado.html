@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home_logado.css' %}">
+    <title>Dermaclinics</title>
+    <link rel="icon" href="{% static 'css/img/icon.png' %}" type="image/x-icon">
+</head>
+
+<body>
+       
+         <!-- Cabeçalho -->
+    <header>
+        <div class="content">
+            <a href="{% url 'home' %}" class="brand-name">Dermaclinics</a>
+            <nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    &#9776; <!-- Ícone de menu -->
+                </div>
+                <ul class="ul" id="menu">
+                    <li><a href="{% url 'login' %}">LOGIN/CADASTRO</a></li>
+                    <li><a href="{% url 'tratamentos' %}">TRATAMENTOS</a></li>
+                    <li><a href="{% url 'tecnologias' %}">TECNOLOGIAS</a></li>
+                    <li><a href="{% url 'consultorio' %}">CONSULTÓRIO</a></li>
+                    <li><a href="{% url 'sobrenos' %}">SOBRE NÓS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+                <li>
+                {% for nome in nomes %}
+                    <p>Olá, {{nome}}</p>
+                {% endfor %}</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Unidade</a></li>
+                <li><a href="#">Agendar Consulta</a></li>
+                <li><a href="login.html">Sair</a></li>
+            </ul>
+        </nav>
+        <div class="comeco">
+            <div class="logo">
+                <img src="{% static 'img/unnamedwhite.png' %}" alt="Logo">
+            </div>
+
+            
+            
+    
+    </header>
+
+
+
+<script src="{% static 'js/js.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<hr>
+
+<p>
+    <a href="{% url 'accounts:private_page_1' %}">Private page 1</a>
+</p>
+<p>
+    <a href="{% url 'accounts:private_page_2' %}">Private page 2</a>
+</p>
+<p>
+    <a href="{% url 'accounts:password_change' %}">Change password</a>
+</p>
+<p>
+    <form action="{% url 'accounts:logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+</p>
