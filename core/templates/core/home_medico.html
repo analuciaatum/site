@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/home_medico.css' %}" />
+    <title>Agendamento de Consulta - Clínica de Dermatologia</title>
+  </head>
+
+  <body>
+    <section class="container">
+      <header>Agendamento Online - Clínica de Dermatologia</header>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome Completo</th>
+            <th>Email</th>
+            <th>Data Consulta</th>
+            <th>Tratamento</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>João Silva</td>
+            <td>joao.silva@email.com</td>
+            <td>2024-11-20</td>
+            <td>Ortodontia</td>
+            <td class="actions">
+              <button class="edit">Editar</button>
+              <button class="delete">Excluir</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Maria Oliveira</td>
+            <td>maria.oliveira@email.com</td>
+            <td>2024-11-21</td>
+            <td>Clareamento</td>
+            <td class="actions">
+              <button class="edit">Editar</button>
+              <button class="delete">Excluir</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Carlos Santos</td>
+            <td>carlos.santos@email.com</td>
+            <td>2024-11-22</td>
+            <td>Implante</td>
+            <td class="actions">
+              <button class="edit">Editar</button>
+              <button class="delete">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <script></script>
+  </body>
+</html>
