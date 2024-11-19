@@ -136,3 +136,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 LOGIN_REDIRECT_URL = '/accounts/private_page_1/'
+
+# settings.py
+
+STATIC_URL = '/static/'  # A URL onde os arquivos estáticos serão acessíveis
+
+# Se você estiver usando o Django para desenvolvimento local, adicione isso:
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',  # Caminho para a pasta de arquivos estáticos
+]
+
+# Isso é necessário para produção (quando você faz o deploy):
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
