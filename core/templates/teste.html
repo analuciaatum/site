@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/home_medico.css' %}" />
+    <title>Agendamento de Consulta - Clínica de Dermatologia</title>
+  </head>
+
+  <body>
+    <section class="container">
+      <header>Agendamento Online - Clínica de Dermatologia</header>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome Completo</th>
+            <th>Email</th>
+            <th>Data Consulta</th>
+            <th>Tratamento</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for agendamento in agendamentos %}
+              <tr>
+                  <td>{{ agendamento.nome }}</td>
+                  <td>{{ agendamento.email }}</td>
+                  <td>{{ agendamento.data_consulta }}</td>
+                  <td>{{ agendamento.tratamento }}</td>
+                  <td class="actions">
+    <a href="{% url 'editar_agendamento' agendamento.id %}" class="edit" style="background-color: #6d504e; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; border: none; cursor: pointer;">Editar</a>
+
+
+                      
+                      <!-- Formulário para exclusão -->
+                      <form action="{% url 'excluir_agendamento' agendamento.id %}" method="POST" style="display:inline;">
+                          {% csrf_token %}
+                          <button type="submit" class="delete" onclick="return confirm('Tem certeza que deseja excluir este agendamento?')">Excluir</button>
+                      </form>
+                  </td>
+              </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+
+ 
+    <script src="{% static 'js/home_medico.js' %}"></script>
+  
+  </body>
+</html>

@@ -1,0 +1,237 @@
+/* Importando a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Aplicando fonte Arial no corpo da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Fonte Arial com fallback para sans-serif */
+}
+
+/* Estilos gerais para o corpo da página */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    background: #d2c1af; /* Cor de fundo */
+}
+
+.back-button-container {
+  text-align: right; /* Alinha o botão à direita */
+  margin-top: 20px;  /* Espaço entre o topo da página e o botão */
+  
+}
+
+.back-btn {
+  background-color: #B88B5C;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s;
+  position: relative;
+  left: -565px;
+  top: -20px;
+}
+
+.back-btn:hover {
+  background-color: #B88B5C;  /* Cor do botão quando o mouse passa por cima */
+}
+
+
+
+header {
+  background-color: #ffffff;
+  padding: 14px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2; 
+  
+}
+
+/* Estilo do conteúdo do cabeçalho */
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* Nome da marca */
+.brand-name {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 3vw; 
+  color: #543320;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 2vw;
+}
+
+/* Menu de navegação */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Lista de navegação */
+.ul {
+  list-style-type: none;
+  padding:0;
+  display: flex;
+  margin: 0;
+  margin-right: 3vw; 
+  justify-content: flex-start; 
+}
+
+.ul li {
+  margin-left: 2vw; 
+  margin-top: 1.5vw;
+}
+
+.ul a {
+  text-decoration: none;
+  color: #7C4F39;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+nav ul a::after {
+  content: "";
+  background-color: #BD966D;
+  height: 3px;
+  width: 0%;
+  display: block;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+nav ul a:hover::after {
+  width: 100%;
+}
+
+
+/* Estilos do container principal do formulário */
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombras para dar profundidade */
+}
+
+/* Estilos para o cabeçalho do formulário */
+.container header {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Estilo do formulário */
+.form {
+    margin-top: 30px;
+}
+
+/* Estilo dos campos de entrada */
+.form .input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-box label {
+    color: #333;
+}
+
+/* Estilo dos campos de entrada e seleção */
+.form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+/* Estilos para os campos de gênero */
+.gender-box h3 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.form .gender-option {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.form .gender {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.gender input {
+    accent-color: #7c4f39;
+    ;
+}
+
+/* Estilos para o campo de seleção (tratamento e médica) */
+.select-box select {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ddd;
+    color: #707070;
+    font-size: 1rem;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+/* Estilo do botão de envio */
+.form button {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    background-color: #7c4f39;
+}
+
+.form button:hover {
+    background-color: #613e2c;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+
+    .form :where(.gender-option, .gender) {
+        row-gap: 15px;
+    }
+}

@@ -1,0 +1,246 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #D2C1AF; 
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+  background-color: #ffffff;
+  padding: 14px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.brand-name {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 3vw; /* Usando vw para ser responsivo */
+  color: #543320;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 2vw; /* Usando vw para margem responsiva */
+}
+
+/* Menu de navegação */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  margin-right: 3vw; /* Usando vw para margem responsiva */
+  justify-content: flex-start; 
+}
+
+.ul li {
+  margin-left: 2vw; /* Usando vw para espaçamento responsivo */
+  margin-top: 1.5vw;
+}
+
+.ul a {
+  text-decoration: none;
+  color: #7C4F39;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+nav ul a::after {
+  content: "";
+  background-color: #BD966D;
+  height: 3px;
+  width: 0%;
+  display: block;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+nav ul a:hover::after {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  header {
+      padding: 20px 10px;
+      flex-direction: column;
+      align-items: center; 
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .ul {
+      display: none; 
+      flex-direction: column; 
+      align-items: center; 
+      width: 100%;
+      background-color: #ffffff;
+      position: absolute;
+      top: 60px; 
+      left: 0;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .ul.active {
+      display: flex; 
+  }
+
+  .ul li {
+      margin-left: 0; 
+      margin-top: 10px; 
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 30px;
+  width: 450px;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form button {
+  align-self: flex-end;
+}
+
+.flex-column > label {
+  color: #151717;
+  font-weight: 600;
+}
+
+.inputForm {
+  border: 1.5px solid #ecedec;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box; /* Adiciona padding e border ao box-sizing */
+}
+
+.input {
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 85%;
+  height: 100%;
+  box-sizing: border-box; /* Adiciona padding e border ao box-sizing */
+}
+
+.input:focus {
+  outline: none;
+}
+
+.inputForm:focus-within {
+  border: 1.5px solid #2d79f3; /* Ajuste para garantir que a borda azul apareça */
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.flex-row > div > label {
+  font-size: 14px;
+  color: black;
+  font-weight: 400;
+}
+
+.span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #2d79f3;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-submit {
+  margin: 20px 0 10px 0;
+  background-color: #151717;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* Adiciona uma transição suave para a cor do fundo */
+}
+
+.button-submit:hover {
+  background-color: #684118;;
+}
+
+.p {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+  border: 1px solid #ededef;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  border: 1px solid #2d79f3;
+}
+
+/* Adicione esta regra ao seu CSS */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa a altura total da tela */
+}
+
+@media (max-width: 480px) {
+  header {
+      padding: 20px 10px; 
+      flex-direction: column;
+  }
+}

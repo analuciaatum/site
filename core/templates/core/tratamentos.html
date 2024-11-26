@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>DermaClinics</title>
+    
+    <link rel="stylesheet" href="{% static 'css/tratamentos.css' %}">
+</head>
+<body>
+    <header>
+        <div class="content">
+            <a href="{% url 'home' %}" class="brand-name">Dermaclinics</a> <!-- Atualize a URL aqui -->
+            <nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    &#9776;
+                </div>
+                <ul class="ul" id="menu">
+                    <li><a href="{% url 'login' %}">LOGIN/CADASTRO</a></li> <!-- Atualize as URLs aqui -->
+                    <li><a href="{% url 'tratamentos' %}">TRATAMENTOS</a></li>
+                    <li><a href="{% url 'tecnologias' %}">TECNOLOGIAS</a></li>
+                    <li><a href="{% url 'consultorio' %}">CONSULTÓRIO</a></li>
+                    <li><a href="{% url 'sobrenos' %}">SOBRE NÓS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="topo-site">
+            <div class="interface flex">
+                <div class="txt-topo-site">
+                    <h1>TRATAMENTOS INOVADORES</h1>
+                    <p>Descubra tratamentos eficazes e inovadores para a sua pele na DermaClinics. Nossa equipe de dermatologistas qualificados oferece soluções personalizadas para acne, rejuvenescimento e cuidados especiais.</p>
+                    <div class="btn-contato">
+                        <a href="{% url 'home' %}">
+                            <button>Entre em contato</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="img-topo-site">
+                    <img src="{% static 'css/img-t/foto.png' %}" alt="Imagem representativa dos tratamentos de dermatologia" class="img-fluid">
+                </div>
+            </div>
+        </section>
+        
+        <section class="especialidades">
+            <h2 class="titulo">TIPOS DE TRATAMENTOS</h2>
+            <div class="flex">
+                <div class="especialidades-box">
+                    <i class="bi bi-stars"></i>
+                    <h3>Pele Sensível</h3>
+                    <p>Tratamentos suaves para controlar a acne e rosácea, incluindo lasers para reduzir vermelhidão e inflamação.</p>
+                </div>
+                <div class="especialidades-box">
+                    <i class="bi bi-sun"></i>
+                    <h3>Renovação da Pele</h3>
+                    <p>Procedimentos esfoliantes que tratam cicatrizes e manchas, promovendo a regeneração e melhorando a textura da pele.</p>
+                </div>
+                <div class="especialidades-box">
+                    <i class="bi bi-suit-heart"></i>
+                    <h3>Tecnologias Avançadas</h3>
+                    <p>Lasers modernos que tratam cicatrizes, rugas e manchas, estimulando o colágeno e rejuvenescendo a pele.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="beneficios">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="{% static 'css/img/undraw_love_it_heart_dxlp (2).svg' %}" alt="Imagem sobre o texto benefício">
+                    </div>
+                    <div class="txt-beneficios">
+                        <h1>BENEFÍCIOS DO TRATAMENTO</h1>
+                        <p>
+                            Os cuidados com a pele são essenciais para garantir não apenas a beleza, mas também a saúde da sua derme. 
+                            Em nossa clínica de dermatologia, oferecemos tratamentos que atendem às necessidades específicas de cada paciente, 
+                            proporcionando diversos benefícios. 
+                            <br><br>
+                            Utilizamos tecnologias avançadas que garantem resultados eficazes e priorizam o conforto dos pacientes. Nossa equipe de dermatologistas qualificados orienta na escolha do tratamento ideal, considerando suas preocupações. 
+                            Com os cuidados certos, você melhora a aparência da pele e fortalece sua autoestima. Venha descobrir como podemos ajudá-lo a alcançar a pele dos seus sonhos!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="{% static 'css/img/acne.png' %}" alt="Acne">
+                <div class="card-content">
+                    <h3>Acne</h3>
+                    <p>Protocolos personalizados para controle da acne ativa e prevenção de cicatrizes, medicamentos tópicos, peelings ou laser.</p>
+                    <a href="#" class="btn">Agendar agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{% static 'css/img/eczema.png' %}" alt="Eczema">
+                <div class="card-content">
+                    <h3>Eczema</h3>
+                    <p>Protocolos personalizados para controle do eczema, utilizando medicamentos tópicos e hidratação intensiva.</p>
+                    <a href="#" class="btn">Agendar agora</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{% static 'css/img/psoríase.png' %}" alt="Psoríase">
+                <div class="card-content">
+                    <h3>Psoríase</h3>
+                    <p>Protocolos personalizados para manejo da psoríase, com medicamentos tópicos e fototerapia.</p>
+                    <a href="#" class="btn">Agendar agora</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer_content">
+                <div id="footer_contacts">
+                    <h1>Clínica de Dermatologia</h1>
+                    <p>Cuidando da sua pele com carinho e expertise.</p>
+                    <div id="footer_social_media">
+                        <a href="https://www.instagram.com/dermacliniics/?igsh=Zm9hcWFtd2RubTk2" class="footer-link" id="instagram" title="Siga-nos no Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/senaisaopaulo/?locale=pt_BR" class="footer-link" id="facebook" title="Curta nossa página no Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://web.whatsapp.com/" class="footer-link" id="whatsapp" title="Envie uma mensagem pelo WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <ul class="footer-list">
+                    <li><h3>Sobre Nós</h3></li>
+                    <li><a>Quem Somos</a></li>
+                    <li><a>Nossos Serviços</a></li>
+                    <li><a>Equipe</a></li>
+                    <li><a>Contato</a></li>
+                </ul>
+                <ul class="footer-list">
+                    <li><h3>Blog</h3></li>
+                    <li><a href="#" class="footer-link">Cuidados com a Pele</a></li>
+                    <li><a href="#" class="footer-link">Tratamentos e Procedimentos</a></li>
+                    <li><a href="#" class="footer-link">Dicas de Beleza</a></li>
+                </ul>
+                <div id="footer_subscribe">
+                    <h3>Assine Nossa Newsletter</h3>
+                    <p>Receba as últimas novidades e dicas sobre cuidados com a pele diretamente no seu e-mail.</p>
+                    <div id="input_group">
+                        <input type="email" id="email" placeholder="Seu e-mail">
+                        <button><i class="fa-regular fa-envelope"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div id="footer_copyright">
+                &#169; 2024 Todos os direitos reservados
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="{% static 'js/tratamentos.js' %}"></script>
+</body>
+</html>

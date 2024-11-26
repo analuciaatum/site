@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/excluir.css' %}">
+    <title>Excluir Agendamento</title>
+</head>
+<body>
+    <h1>Excluir Agendamento</h1>
+    <p>Você tem certeza de que deseja excluir o agendamento de <strong>{{ agendamento.nome }}</strong> para o dia <strong>{{ agendamento.data_consulta }}</strong>?</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <button type="submit">Sim, excluir</button>
+        <a href="{% url 'home' %}">Não, cancelar</a> <!-- Substitua 'home' pelo nome da URL de sua página inicial -->
+    </form>
+</body>
+</html>
